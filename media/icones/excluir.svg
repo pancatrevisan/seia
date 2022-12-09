@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 23.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg
+   version="1.1"
+   id="Layer_1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 3000 3000"
+   style="enable-background:new 0 0 3000 3000;"
+   xml:space="preserve"
+   sodipodi:docname="excluir.svg"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:i="&amp;ns_ai;"><defs
+   id="defs19" /><sodipodi:namedview
+   id="namedview17"
+   pagecolor="#ffffff"
+   bordercolor="#000000"
+   borderopacity="0.25"
+   inkscape:showpageshadow="2"
+   inkscape:pageopacity="0.0"
+   inkscape:pagecheckerboard="0"
+   inkscape:deskcolor="#d1d1d1"
+   showgrid="false"
+   inkscape:zoom="0.279"
+   inkscape:cx="1498.2079"
+   inkscape:cy="1498.2079"
+   inkscape:window-width="1920"
+   inkscape:window-height="1017"
+   inkscape:window-x="-8"
+   inkscape:window-y="-8"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="Layer_1" />
+<switch
+   id="switch14"
+   style="fill:#22499c;fill-opacity:1">
+	<foreignObject
+   requiredExtensions="http://ns.adobe.com/AdobeIllustrator/10.0/"
+   x="0"
+   y="0"
+   width="1"
+   height="1">
+		
+	</foreignObject>
+	<g
+   i:extraneous="self"
+   id="g12"
+   style="fill:#22499c;fill-opacity:1">
+		<g
+   id="g10"
+   style="fill:#22499c;fill-opacity:1">
+			<path
+   d="M2352.85,319.81h-366C1982.8,142.82,1837.85,0,1659.9,0H1340.1c-177.95,0-322.9,142.82-326.94,319.81h-366     c-197.79,0-358.7,160.91-358.7,358.69v147.37c0,57.83,46.89,104.71,104.71,104.71h61.48v1663.7     C454.65,2818,636.64,3000,860.36,3000h1279.29c223.71,0,405.71-182,405.71-405.72V930.58h61.48     c57.83,0,104.71-46.88,104.71-104.71V678.5C2711.55,480.73,2550.64,319.81,2352.85,319.81z M1340.1,209.42h319.81     c62.48,0,113.79,48.86,117.67,110.39h-555.16C1226.31,258.29,1277.61,209.42,1340.1,209.42z M497.88,678.5     c0-82.3,66.95-149.27,149.27-149.27h470.33h765.04h470.34c82.32,0,149.27,66.97,149.27,149.27v42.65h-61.48H559.36h-61.48V678.5z      M2335.93,2594.28c0,108.24-88.04,196.29-196.28,196.29H860.36c-108.24,0-196.28-88.05-196.28-196.29V930.58h1671.85V2594.28z"
+   id="path2"
+   style="fill:#22499c;fill-opacity:1" />
+			<path
+   d="M1072.54,2465.64c57.83,0,104.71-46.89,104.71-104.71v-966.27c0-57.83-46.88-104.71-104.71-104.71     c-57.83,0-104.71,46.89-104.71,104.71v966.27C967.83,2418.76,1014.71,2465.64,1072.54,2465.64z"
+   id="path4"
+   style="fill:#22499c;fill-opacity:1" />
+			<path
+   d="M1500,2465.64c57.83,0,104.71-46.89,104.71-104.71v-966.27c0-57.83-46.88-104.71-104.71-104.71     s-104.71,46.89-104.71,104.71v966.27C1395.29,2418.76,1442.17,2465.64,1500,2465.64z"
+   id="path6"
+   style="fill:#22499c;fill-opacity:1" />
+			<path
+   d="M1927.46,2465.64c57.83,0,104.71-46.89,104.71-104.71v-966.27c0-57.83-46.89-104.71-104.71-104.71     c-57.82,0-104.71,46.89-104.71,104.71v966.27C1822.75,2418.76,1869.64,2465.64,1927.46,2465.64z"
+   id="path8"
+   style="fill:#22499c;fill-opacity:1" />
+		</g>
+	</g>
+</switch>
+
+</svg>

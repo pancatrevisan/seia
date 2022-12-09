@@ -1,0 +1,802 @@
+.card-columns {/*area que contem os cards*/ 
+    box-sizing: border-box; 
+    overflow-x: hidden; 
+    width: 100%; 
+    display: grid; 
+    grid-template-columns: 32% 32% 32%; 
+    justify-content: space-between; 
+    margin-bottom: 3vh; 
+} 
+ 
+.card-columns .esconder {display: none;} 
+ 
+.card-columns .card {/*cada um dos cards individualmente*/ 
+    box-sizing: border-box; 
+    width: 100%; 
+    min-height: 40vh; 
+    max-height: 70vh; 
+    overflow: hidden; 
+    margin: 0; 
+    background: #fff; 
+    margin-bottom: 5vh; 
+} 
+ 
+.card-columns h4 { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: flex-start;     
+} 
+ 
+#cards-estudantes h4 { 
+    max-height: 8vh; 
+}
+
+    .card-columns h4 .titulo-card { 
+        max-width: 70%; 
+        display: flex;
+        width: 100%;
+        height: auto;
+        max-height: 7vh;
+        font-family: "Righteous"; 
+        font-size: 14pt; 
+        letter-spacing: 1px; 
+        color: #22499c; 
+        text-transform: uppercase;
+        text-align: left;
+        overflow-y: hidden;
+        margin-bottom: 1vh;
+    }
+
+        .card-columns a {
+            display: flex;
+            text-decoration: none;
+            min-width: 100%;
+        }
+
+    .card-columns h4 button {/*botão remover estimulo publico*/
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        min-width: 25%;
+        font-family: "Righteous";
+        font-size: 13pt;
+        font-weight: 100;
+        padding: 10px;
+        color: #fff;
+        background: #22499c; 
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        transition: 0.5s;
+    }
+
+    .card-columns h4 button:hover {opacity: 0.7;}
+
+        .card-columns h4 .btn-block img {
+            max-height: 2.6vh;
+        }
+ 
+.card .ver-mais { 
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding-top: 0.75vh; 
+    margin-right: 3vh; 
+    width: 4vh; 
+    cursor: pointer; 
+    transition: 1s;
+} 
+ 
+    .card .ver-mais .bolinha { 
+        width: 1vh; 
+        height: 1vh; 
+        border-radius: 100%; 
+        margin-bottom: 3px; 
+        background: #22499c; 
+        transition: 1s; 
+    }
+     
+    .card .ver-mais:hover .bolinha {box-shadow: 0px 7px 15px 0px #3a3a3a;}
+    
+        /*opções do que fazer com cada card*/
+
+        h4 .container-fluid {
+            display: none;
+            position: absolute;
+            justify-content: center;
+            align-items: center;
+            margin-left: 13.5vw;
+            width: 12vw;
+            z-index: 2;
+            font-family: 'Righteous';
+            color: #22499c;
+            background: #eceff5;
+            border: 2px solid #adb7ca;
+            box-shadow: 0px 3px 10px 0px #0e1c3a;         
+            border-radius: 5px;
+            animation: aparece-desaparece 0.5s ease-out; 
+        }   
+    
+            h4 .container-fluid div {
+                display: block;
+                width: 100%;
+                padding: 10px 0;
+            }
+
+            h4 .container-fluid div .row {
+                padding: 0;
+            }
+    
+            h4 .container-fluid a {
+                width: 100%;
+                text-decoration: none;
+                color: #22499c;            
+                display: flex;
+                justify-content: space-around;
+                text-align: right;
+                font-weight: 100;
+                cursor: pointer;
+            }
+    
+                h4 .container-fluid a:hover p {
+                    background: #cdd6e2;
+                }                
+    
+                h4 .container-fluid a p {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 85%;
+                    margin: 0;
+                    padding: 12px 10px;
+                    font-size: 13pt;
+                    transition: 0.5s;
+                    text-align: center;
+                }
+
+                h4 .container-fluid a p img {
+                    max-width: 2.6vh;
+                    margin-right: 2vh;
+                }
+ 
+.card-columns .card-body { 
+    display: inline-block; 
+    width: 100%; 
+    margin-top: 1vh; 
+}
+
+    .card-columns .card-body .card-text {text-align: left;}
+ 
+.card-columns span { 
+    width: 100%; 
+    font-family: "Exo 2"; 
+    font-size: 13pt; 
+    color: #4d4d4d; 
+} 
+ 
+.card-columns .card-body .categorias-estimulo { 
+    width: 100%; 
+    display: flex; 
+    align-content: center; 
+} 
+ 
+    .card-columns .card-body .categorias-estimulo p.card-text { 
+        width: auto; 
+        max-height: 16pt; 
+        box-sizing: border-box; 
+        padding: 2px 4px; 
+        display: flex; 
+        font-family: "Exo 2"; 
+        font-size: 10pt; 
+        font-style: italic;     
+        color: #fff; 
+        background: #22499c; 
+        border-radius: 2px; 
+        text-transform: capitalize;        
+    } 
+ 
+    .card-columns .card-body .categorias-estimulo p { 
+        font-family: "Exo 2"; 
+        font-size: 10pt; 
+        margin-top: 1vh; 
+        margin-right: 1vh; 
+        margin-bottom: 0; 
+        padding: 2px 4px; 
+        color: #4d4d4d; 
+        text-transform: lowercase;
+    }
+
+        #cards-estudantes .card-body .categorias-estimulo p {text-transform: capitalize;}
+ 
+    .card-columns .card-body .categorias-estimulo p input { 
+        font-family: "Exo 2"; 
+        background: none; 
+        border: none; 
+        color: #4d4d4d; 
+    } 
+ 
+.card-img-top {/*conteiner da imagem*/ 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    width: 100%; 
+    height: 40vh; 
+    overflow: hidden; 
+    margin-bottom: 3vh; 
+    /*box-shadow: 0px 3px 10px 0px #0e1c3a;*/ 
+    border-radius: 10px; 
+    background: #fff; 
+    filter: brightness(80%) contrast(80%); 
+    transition: 1s; 
+} 
+ 
+    .card-img-top:hover {filter: brightness(100%) contrast(100%);} 
+ 
+    .card-img-top img {width: 100%;}
+
+/*templates ou wizard*/
+
+#templates {
+    padding-bottom: 5vh;
+}
+
+#templates .row .container .row-2 {
+    display: flex;
+    align-items: flex-start;
+}
+
+    #templates .row .container .row-2 a {
+        text-decoration: none;
+        transition: 1s;
+        padding: 5vh;
+        border-radius: 15px;
+    }
+
+        #templates .row .container .row-2 #disabled {
+            opacity: 0.5;
+            pointer-events: none;
+            cursor: default;
+        }
+
+        #templates .row .container .row-2 a:hover {
+            box-shadow: 0px 0px 15px 0px #0e1c3a9f;
+        }
+        
+        #templates .row .container .row-2 a .card-text {
+            text-transform: unset;
+            font-size: 12pt;
+            font-family: "Exo 2";
+            color: #4d4d4d;
+        }
+ 
+/*cards da pagina templates*/
+
+#card-templates .card {
+    min-height: 40vh;
+    flex-direction: column;
+    justify-content: space-between;
+}
+ 
+#card-templates a {     
+    color: #fff; 
+    font-family: "Righteous"; 
+    font-size: 14pt; 
+    text-decoration: none; 
+    text-transform: uppercase; 
+    text-align: center; 
+    width: 100%;    
+} 
+ 
+    #card-templates a .botao-templates { 
+        background: #22499c; 
+        border-radius: 5px; 
+        cursor: pointer; 
+        transition: 1s; 
+    } 
+ 
+    #card-templates a .botao-templates p { 
+        padding: 1.5vh;
+    } 
+ 
+    #card-templates a:hover .botao-templates { 
+        opacity: 0.7; 
+    }
+
+    /*#card-templates .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 8vh;
+    }*/
+
+    #card-templates .card-body span {
+        height: 10vh;
+    }
+ 
+    #card-templates .card-body span p { 
+        display: flex; 
+        align-items: flex-start;
+        margin-bottom: 2vh; 
+    }
+
+/*cards de programações da sessão de ensino*/
+
+#programacoes .row-2 {
+    display: flex;
+    margin-bottom: 6vw;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#programacoes .col-3 {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+}
+
+#programacoes .col-3 .card {
+    display: flex;
+    min-width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#programacoes .col-3 .card .row {/*imagem do estudante*/
+    width: 16vw;
+    height: 16vw
+}
+
+    #programacoes .col-3 .card .row .col {
+        width: 14vw;
+        height: 14vw;
+    }
+
+#programacoes .col-3 .card .card-body { /*infos do estudante*/
+    margin-left: 3vw;
+    width: 65%;
+}
+
+    #programacoes .col-3 .card .card-body h4 { margin-bottom: 3vh; }
+
+    #programacoes .col-3 .card .card-body h4 p {
+        font-size: 24pt;
+        letter-spacing: 1px;
+    }
+
+    #programacoes .col-3 .card .card-body p {
+        text-align: left;
+        margin: 0;
+    }
+
+    #programacoes .col-3 .card .card-body .card-text {
+        font-size: 12pt;
+        font-weight: 100;
+        margin-bottom: 1vh;
+    }
+
+#programacoes .col-3 .student-tools .row { width: auto; }
+
+#programacoes .col-9 .row .col .card-columns { grid-template-columns: 28% 28% 28%; }
+
+#programacoes .col-9 .row .col .card-columns .card .card-body h4 {
+    display: block;
+    margin-bottom: 1vw;
+    font-family: "Righteous";
+    font-size: 16pt;
+    text-transform: uppercase;
+    color: #22499c;
+    font-weight: 100;
+}
+
+    #programacoes .col-9 h4 .barra-horizontal {
+        margin-top: 1vh;
+        margin-bottom: 2vh;
+        width: 100%;
+        height: 2px;
+        background: #22499c;
+    }
+
+#programacoes .col-9 .row .col .card-columns .card .card-text {
+    display: flex;
+    justify-content: space-between;    
+}
+
+    #programacoes .col-9 .row .col .card-columns .card .card-text p {        
+        font-family: "Exo 2";
+        font-size: 12pt;
+    }
+
+    #programacoes .col-9 .row .col .card-columns .card .card-text .card-label {
+        font-weight: bold;
+        font-family: "Exo 2";
+    }
+
+    #programacoes .col-9 .row .col .card-columns .card .card-body .botoes-prog { display: block; }
+
+    #programacoes .col-9 .row .col .card-columns .card .card-body .botoes-prog button {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0.5vh 0;
+        padding: 20px 35px;
+        background: #22499c;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-family: "Righteous";
+        font-size: 14pt;
+        text-transform: uppercase;        
+        cursor: pointer;
+        transition: 1s;
+    }
+
+        #programacoes .col-9 .row .col .card-columns .card .card-body .botoes-prog button img {
+            width: 1vw;
+            height: 1vw;
+            margin-right: 0.8vw;
+        }
+
+        #programacoes .col-9 .row .col .card-columns .card .card-body .botoes-prog button:hover {opacity:0.7;} 
+
+    #programacoes .col-9 .row .col .card-columns .card .card-body .botoes-prog a {
+        width: 100%;
+        text-decoration: none;
+        color: #fff;
+    }
+
+    #chart_div { /*grafico pizza dos relatorios*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #chart_div svg {        
+        margin-left: 7vh;
+    }
+
+/*editar avaliação*/
+
+.modal-body .card-columns {
+    padding: 0 3vh;
+    margin: 0;
+    grid-template-columns: 48% 48%;
+}
+
+#activityContainerContent .card {
+    min-height: auto;
+}
+
+#activityContainerContent h4 {
+    min-width: 100%;
+    text-align: left;    
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: 1.5vh;
+}
+
+#activityContainerContent .titulo-card {
+    min-width: 100%;
+    text-align: left;
+    height: 15vh;
+    max-height: 18vh;
+    overflow: hidden;
+}
+
+#activityContainerContent .col-6 {
+    display: flex;
+    justify-content: center;
+}
+
+.modal-body .col-12 {
+    display: flex;
+    justify-content: center;
+}
+
+#activityContainerContent span {
+    margin-top: 2vh;
+    text-align: left;
+}
+
+#activityContainerContent a {
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5vh 0;
+    padding: 10px 35px;
+    background: #22499c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-family: "Righteous";
+    font-size: 14pt;
+    text-transform: uppercase;        
+    cursor: pointer;
+    margin-top: 3vh;
+    transition: 1s;
+}
+
+    #activityContainerContent a:hover {opacity: 0.7;}
+
+#activityContainerContent button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5vh 0;
+    padding: 10px 35px;
+    background: #22499c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-family: "Righteous";
+    font-size: 14pt;
+    text-transform: uppercase;        
+    cursor: pointer;
+    transition: 1s;
+}
+
+    #activityContainerContent .col-6 button:hover {opacity: 0.7;}
+
+        #activityContainerContent .container-fluid .row {
+            display: block;
+        }
+
+            #activityContainerContent .container-fluid .row a {
+                width: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0.5vh 0;
+                padding: 10px 35px;
+                background: #22499c;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                font-family: "Righteous";
+                font-size: 14pt;
+                text-transform: uppercase;        
+                cursor: pointer;
+                transition: 1s;
+                box-sizing: border-box;           
+            }
+
+                #activityContainerContent .container-fluid .row a:hover {opacity: 0.7;}
+
+    #buttonShowMore {
+        width: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0.5vh 0;
+        padding: 10px 35px;
+        background: #22499c;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-family: "Righteous";
+        font-size: 12pt;
+        text-transform: uppercase;        
+        cursor: pointer;
+        transition: 1s;        
+    }
+
+    #buttonShowMore img, #showMoreButtonId img {
+        width: 3vh;
+        margin-right: 2vh;
+    }
+
+    #buttonShowMore:hover {opacity: 0.7;}
+
+/*gerar atividades do programa*/
+
+#addStimuli {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#addStimuli .card-columns {grid-template-columns: 48% 48%;}
+
+    #addStimuli .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+        #addStimuli .card .card-body {
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+        }
+
+        #addStimuli .titulo-card {margin: 0;}
+
+        #addStimuli h4 p {
+            min-width: 100%;
+            margin-bottom: 2vh;
+        }
+
+        #addStimuli .card .card-body span {
+            min-width: 100%;
+            text-align: left;
+        }
+
+        .modal-body .card button {
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            margin: 15px 0;
+            margin-bottom: 0;
+            padding: 15px 10px;
+            font-family: "Righteous";
+            font-size: 14pt;
+            text-transform: uppercase;
+            color: white;
+            background: #22499c;
+            cursor: pointer;
+            transition: 1s;
+        }
+
+        #showMoreButtonId {
+            width: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0.5vh 0;
+            padding: 10px 35px;
+            background: #22499c;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-family: "Righteous";
+            font-size: 12pt;
+            text-transform: uppercase;        
+            cursor: pointer;
+            transition: 1s;        
+        }
+
+        #filterSdasdaf {width: 100%;}
+
+        #addStimuli .barra-pesquisa {
+            min-width: 100%;
+            margin-bottom: 3vh;
+        }
+
+#modelStimulus, #selectedStimuli {
+    background: none;
+    padding: 0;
+    margin: 0;
+    border-bottom: 4px solid #22499c;
+    margin-bottom: 5vh;
+}
+
+    #modelStimulus .card button, #selectedStimuli .card button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        border: none;
+        border-radius: 5px;
+        margin: 15px 0;
+        margin-bottom: 0;
+        padding: 15px 10px;
+        font-family: "Righteous";
+        font-size: 14pt;
+        text-transform: uppercase;
+        color: white;
+        background: #22499c;
+        cursor: pointer;
+        transition: 1s;
+    }
+
+        #modelStimulus .card button img, #selectedStimuli .card button img {
+            width: 3vh;
+            margin-right: 2vh;
+        }
+
+    #gerarAtv h2 {
+        min-width: 100%;
+        text-align: left;
+        margin: 2vh 0;
+    }
+
+/*athena*/
+
+.athena-icon {
+    position: fixed;
+    bottom: 15vh;
+    right: 3.5vh;
+    width: 8vh;
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    box-shadow: 0px 3px 10px 0px #0e1c3a;
+    border-radius: 100%;
+    border: none;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: 1s;    
+}
+
+    .athena-icon:hover {opacity: 1;}
+
+    .athena-icon a img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 100%;
+        min-height: 100%;
+        border: none;
+        text-align: center;
+        cursor: pointer;
+        transition: 1s;        
+    }
+
+#athena .card-columns {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+}
+
+    #athena .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 18.5%;
+        padding: 4vh 3vh;
+        background: #22499c;
+        transition: 0.5s;
+        border-radius: 5px;
+    }
+
+        #athena .card a {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            color: #fff;
+            text-decoration: none;
+            text-align: center;
+        }
+
+            #athena .card:hover {opacity: 0.7;}
+
+            #athena .card a .card-body {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                margin: 0;
+            }
+
+            #athena .card a .card-header {
+                width: 100%;
+                font-family: "Righteous";
+                font-weight: 100;
+                font-size: 14pt;
+                text-align: center;
+                padding-bottom: 1vh;
+                border-bottom: 2px solid #fff;
+                margin-bottom: 2vh;
+            }
+
+            #athena .card a p {
+                width: 100%;
+                font-family: "Exo 2";
+                font-size: 12pt;
+                text-align: center;
+                margin-bottom: 5vh;
+            }
+
+            #athena .card a img {
+                max-height: 12vh;
+            }

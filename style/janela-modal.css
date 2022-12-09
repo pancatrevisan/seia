@@ -1,0 +1,295 @@
+.conteiner-modal { 
+    box-sizing: border-box; 
+    position: absolute; 
+    width: 100%; 
+    height: 100%; 
+    margin: 0; 
+    padding: 0; 
+    display: none; 
+    justify-content: center; 
+    align-items: center; 
+} 
+ 
+.modal { 
+    box-sizing: border-box;
+    position: fixed; 
+    background-color: white; 
+    box-shadow: 0px 3px 10px 0px #0e1c3a; 
+    display: none; 
+    flex-direction: column; 
+    justify-content: space-around; 
+    align-content: center; 
+    border-radius: 10px; 
+    z-index: 2;
+    padding: 5vh;
+    animation: janela-modal; 
+    animation-duration: 800ms; 
+} 
+ 
+.fechar-modal { 
+    position: absolute; 
+    z-index: 3; 
+    width: 8vh; 
+    height: 8vh; 
+    top: -2vh; 
+    right: -4vh; 
+    border-radius: 100%; 
+    background: #da3f3f; 
+    display: flex; 
+    justify-content: space-around; 
+    align-content: center; 
+    cursor: pointer; 
+    transition: 0.5s; 
+    border: 7px solid #fff; 
+} 
+ 
+    .fechar-modal:hover {background: #ec7272;} 
+ 
+    .fechar-modal img { 
+        width: 40%; 
+    } 
+ 
+.modal h2 { 
+    display: block; 
+    text-align: center; 
+    width: 100%; 
+    margin-bottom: 5vh; 
+    text-transform: uppercase; 
+} 
+ 
+    .modal h2 .barra-horizontal { 
+        width: 50%; 
+        min-height: 3px; 
+        margin-left: 25%; 
+        margin-top: 1vh; 
+        background: #22499c; 
+    } 
+ 
+.modal form { 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: flex-end; 
+    box-sizing: border-box; 
+    width: 80%; 
+    margin: 0 10%; 
+    margin-top: 10vh; 
+} 
+ 
+    .modal .form-group { 
+        box-sizing: border-box; 
+    } 
+ 
+    .modal input { 
+        box-sizing: border-box; 
+    } 
+ 
+.fundo-escuro { 
+    display: none; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100vw; 
+    height: 100%; 
+    background-color: #122446; 
+    opacity: 0.8; 
+    z-index: 1; 
+} 
+ 
+/*recuperar senha na tela de login*/ 
+ 
+#recuperar-senha { 
+    padding: 5vh; 
+    min-width: 40vw; 
+    max-height: 80vh; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%,-50%); 
+} 
+ 
+#recuperar-senha .form-control { 
+    min-width: 100%; 
+} 
+ 
+#recuperar-senha .form-group button { 
+    width: 60%; 
+    margin: 2vh 20%; 
+} 
+ 
+@media(max-width: 999px) { /*responsividade janela modal de recuperar senha da tela de login*/ 
+ 
+    #recuperar-senha { 
+        width: 70%; 
+        padding: 7vh 0.5vh; 
+    } 
+ 
+    #recuperar-senha #botao-recsenha { 
+        display: flex; 
+        justify-content: space-around; 
+        align-items: center; 
+    } 
+     
+        #recuperar-senha #botao-recsenha button { 
+            margin-left: 0; 
+            margin-right: 0; 
+            width: 100%; 
+     
+        } 
+ 
+} 
+ 
+/*janela modal para trocar foto de perfil do usuario*/ 
+ 
+#trocar-avatar { 
+    position: fixed; 
+    padding: 5vh; 
+    min-width: 40vw; 
+    max-height: 80vh; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%,-50%); 
+} 
+ 
+#trocar-avatar form { 
+    box-sizing: border-box; 
+    display: block; 
+    margin-right: 0; 
+    margin-left: 0; 
+    width: 100%; 
+} 
+ 
+#trocar-avatar .input-group { 
+    display: flex; 
+    justify-content: center; 
+    box-sizing: border-box; 
+    width: 100%; 
+    max-height: 50vh; 
+    margin-bottom: 3vh; 
+    border-radius: 5px; 
+    border: 2px solid #adb7ca; 
+    overflow: hidden; 
+} 
+ 
+    #trocar-avatar input { 
+        box-sizing: border-box; 
+        width: 100%; 
+    } 
+ 
+    #trocar-avatar .input-group button { 
+        padding: 1vh; 
+        font-family: "Righteous"; 
+        text-transform: uppercase; 
+        font-size: 10pt; 
+        background: #eceff5; 
+        color: #22499c; 
+        border: none; 
+        border-radius: 0; 
+        border-right: 2px solid #adb7ca; 
+        transition: 1s; 
+        cursor: pointer; 
+    } 
+ 
+        #trocar-avatar .input-group button:hover { 
+            background: #adb7ca;; 
+            transition: 1s; 
+        } 
+ 
+        #trocar-avatar .input-group #inp_fileName { 
+            border: none; 
+            border-radius: 0; 
+            overflow: hidden; 
+            padding: 1vh; 
+            font-family: "Exo 2"; 
+            font-size: 10pt; 
+            color: #4d4d4d; 
+        } 
+ 
+#trocar-avatar .container { 
+    overflow: hidden; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    max-width: 100%; 
+    max-height: 30vh; 
+    box-sizing: border-box; 
+    border: none; 
+    margin-bottom: 3vh; 
+} 
+ 
+    #trocar-avatar .container img { 
+        max-height: 30vh;
+        border: none; 
+    } 
+ 
+#trocar-avatar .modal-footer { 
+    display: block; 
+    width: 100%; 
+} 
+ 
+#trocar-avatar .modal-footer button { 
+    width: 100%; 
+    border: none; 
+    border-radius: 5px; 
+    padding: 15px 10px; 
+    font-family: "Righteous"; 
+    font-size: 14pt; 
+    text-transform: uppercase; 
+    color: white; 
+    background: #22499c; 
+    cursor: pointer; 
+    transition: 1s; 
+} 
+ 
+    #trocar-avatar .modal-footer button:hover {opacity: 0.7;} 
+ 
+@media(max-width: 999px) { /*janela modal para trocar foto de perfil do usuario*/ 
+ 
+    #trocar-avatar { 
+        top: 50%; 
+        left: 50%; 
+        width: 70vw; 
+        padding: 7vh 2vh; 
+    } 
+ 
+}
+
+/*adicionar aplicador*/
+
+#add-aplicador {
+    top: 12vh;
+}
+
+/*add profissional*/
+
+#modal-profissional {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    top: 35vh;
+    min-height: 35vh;
+}
+
+    #modal-profissional .input-group {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+        #modal-profissional .input-group input {
+            width: 100%; 
+            height: 6vh; 
+            margin: 0; 
+            padding: 0 10px; 
+            display: flex; 
+            justify-content: left; 
+            background: #eceff5; 
+            border: 2px solid #adb7ca;
+            text-transform: uppercase; 
+            box-sizing: border-box; 
+            font-family: "Righteous"; 
+            max-width: 100%;
+            background: url(/SEIA/media/barra-pesquisa/pesquisa.svg) no-repeat center left;/*icone de pesquisar*/
+            background-origin: content-box;
+            background-size: 1.2vw 1.2vw;
+        }

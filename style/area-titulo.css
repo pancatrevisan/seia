@@ -1,0 +1,323 @@
+ 
+/*barra de pesquisa*/ 
+ 
+.barra-pesquisa { 
+    width: 100%; 
+    min-height: 8vh; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin-bottom: 8vh; 
+} 
+ 
+/*submenu barra de pesquisa*/ 
+ 
+.barra-pesquisa .dropdown-search { 
+    display: block; 
+    overflow: hidden; 
+    height: 100%; 
+    z-index: 3; 
+    border-radius: 5px; 
+} 
+ 
+.barra-pesquisa .dropdown-search:hover { 
+    border-bottom-left-radius: 0; 
+    border-bottom-right-radius: 0; 
+} 
+ 
+    .barra-pesquisa .dropdown-search a { 
+        border-radius: 5px; 
+        cursor: pointer; 
+        height: 100%; 
+    } 
+ 
+    .barra-pesquisa .dropdown-search #dropdown-opcoes { /*subitens*/ 
+        box-sizing: border-box; 
+        border-radius: 5px; 
+        display: none; 
+        position: absolute; 
+        transition: 1s; 
+        background: #eceff5; 
+        border-radius: 0 0 5px 5px; 
+        overflow: hidden; 
+    } 
+ 
+    .barra-pesquisa .dropdown-search:hover #dropdown-opcoes { 
+        display: block; 
+        box-shadow: 0px 3px 10px 0px #0e1c3a;
+    } 
+ 
+    .barra-pesquisa ul li { list-style: none; } 
+ 
+    .barra-pesquisa ul a p { 
+        list-style: none; 
+        border-radius: 0; 
+    } 
+ 
+    .barra-pesquisa .dropdown-search #fechar-dropdown {display: none;} 
+ 
+    @media (max-width: 999px) { /*barra de pesquisa*/ 
+          
+        .barra-pesquisa .dropdown-search { 
+            width: 100%; 
+            background: #fff; 
+        } 
+ 
+        .barra-pesquisa #dropdown-opcoes {             
+            display: flex; 
+            position: fixed; 
+            box-shadow: 0px -3px 10px 0px #696969; 
+            box-sizing: border-box; 
+            /*background: #eceff5;*/ 
+            width: 100%; 
+            bottom: -56vh; 
+            left: 0;        
+            padding: 1vh 0;      
+            transition: 1s;
+        }         
+         
+        #dropdown-opcoes a li {width: 100%;} 
+         
+        #dropdown-opcoes a li p { 
+            width: 100%; 
+            background: #eceff5; 
+            color: #22499c;
+        } 
+ 
+        .barra-pesquisa .dropdown-search #fechar-dropdown {display: block;} 
+         
+    } 
+ 
+.barra-pesquisa form { 
+    width: 75%; 
+    height: 100%; 
+    box-sizing: border-box; 
+} 
+ 
+.barra-pesquisa .form-group { 
+    box-sizing: border-box; 
+    width: 100%; 
+    height: 6vh; 
+    margin: 0; 
+    padding: 0 10px; 
+    display: flex; 
+    justify-content: left; 
+    background: #eceff5; 
+    border: 2px solid #adb7ca; 
+} 
+ 
+    .barra-pesquisa .form-group input { 
+        text-transform: uppercase; 
+        box-sizing: border-box; 
+        font-family: "Righteous"; 
+        letter-spacing: 1px; 
+        max-width: 100%; 
+        height: 100%;         
+        padding: 0 10px; 
+        margin: 0; 
+        background: transparent; 
+        border: none; 
+    } 
+ 
+    .barra-pesquisa .form-group button { 
+        box-sizing: border-box; 
+        width: auto; 
+        height: 100%; 
+        margin: 0; 
+        padding: 0; 
+        border-radius: 0; 
+        background: transparent; 
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+    } 
+ 
+    .barra-pesquisa .form-group button img { 
+        min-height: 4vh;
+        max-height: 5vh;
+        margin-right: 10px;
+    } 
+ 
+    .barra-pesquisa .hide-btn {display: none;} 
+ 
+.barra-pesquisa a { /*botao para clicar e aparecer as opcoes de criar nova atv ou buscar no repo*/ 
+    text-decoration: none;     
+} 
+ 
+.barra-pesquisa a p { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    width: 20vw; 
+    min-height: 6vh; 
+    box-sizing: border-box; 
+    border-radius: 5px; 
+    padding: 10px 15px; 
+    background: #22499c; 
+    font-family: "Righteous";
+    font-size: 12pt;
+    color: #fff; 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+    transition: 1s; 
+} 
+ 
+    .barra-pesquisa a p img { 
+        min-height: 1vh;
+        max-height: 2vh;
+        margin-right: 20px; 
+    } 
+ 
+    .barra-pesquisa a p:hover { 
+        opacity: 0.7; 
+        transition: 1s; 
+    }
+
+    .barra-pesquisa a p span {
+        width: auto;
+        font-size: 11pt;
+    }
+ 
+    #pesquisa-templates { 
+        justify-content: space-around; 
+    } 
+ 
+    #pesquisa-templates .form { 
+        width: 100%; 
+    } 
+ 
+/*header titulo da pagina*/ 
+ 
+.header-titulo { 
+    display: flex; 
+    justify-content: space-between; 
+    box-sizing: border-box; 
+    width: 100%; 
+    padding: 8vh 8vw;             
+} 
+ 
+.header-titulo .texto { 
+    width: 45%; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+} 
+ 
+.header-titulo .barra-horizontal { 
+    margin: 0; 
+    margin-top: 1vh; 
+    margin-bottom: 5vh; 
+    height: 4px; 
+    background: #fff; 
+} 
+ 
+.header-titulo h1, .header-titulo p { 
+    color: #fff; 
+} 
+ 
+.header-titulo .desenho { 
+    min-width: 50%; 
+    height: 50vh; 
+    display: flex; 
+    justify-content: right; 
+} 
+ 
+.header-titulo img { 
+    min-width: 100%; 
+    justify-content: right; 
+} 
+
+/*area de titulos 2*/ 
+ 
+.titulo-pagina { 
+    margin-bottom: 5vh; 
+} 
+ 
+.titulo-pagina h1 { 
+    display: block; 
+    width: 100%; 
+    text-align: center; 
+    margin-bottom: 1vh; 
+} 
+ 
+.titulo-pagina .texto { 
+    width: 100%; 
+    height: auto; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+} 
+ 
+.titulo-pagina .barra-horizontal { 
+    margin: 0; 
+    width: 30%; 
+    min-height: 3px; 
+    margin-bottom: 5vh; 
+    background: #22499c; 
+} 
+ 
+.titulo-pagina p { 
+    text-align: center; 
+    width: 40%; 
+} 
+ 
+/*minhas atividades*/
+
+#pagina-inicial {/*degrade*/ 
+    background: linear-gradient(53deg, #fa6fce 0%, #22499c 100%); 
+    background-size: 150% 150%; 
+    animation: muda-degrade 5s ease infinite; 
+} 
+ 
+#minhas-atv {/*degrade*/ 
+    background: linear-gradient(53deg, #22499c 0%, #fa6fce 100%); 
+    background-size: 150% 150%; 
+    animation: muda-degrade 5s ease infinite; 
+}
+
+#rep-atv {
+    background: linear-gradient(36deg, #b8268a 0%, #f28e62 100%);
+    background-size: 150% 150%; 
+    animation: muda-degrade 5s ease infinite; 
+}
+ 
+#meus-est {/*degrade*/ 
+    filter: saturate(80%); 
+    background: rgb(221,57,203); 
+    background: linear-gradient(48deg, rgba(221,57,203,1) 0%, rgba(255,123,63,1) 100%); 
+    background-size: 150% 150%; 
+    animation: muda-degrade 5s ease infinite; 
+} 
+ 
+#students { 
+    background: rgb(221,156,57); 
+    background: linear-gradient(48deg, rgba(221,156,57,1) 0%, rgba(217,92,232,1) 100%); 
+    background-size: 150% 150%; 
+    animation: muda-degrade 5s ease infinite; 
+} 
+ 
+#reforcos { 
+    background: rgb(188,81,214); 
+    background: linear-gradient(50deg, rgba(188,81,214,1) 0%, rgba(67,111,212,1) 100%); 
+    background-size: 150% 150%;  
+    animation: muda-degrade 5s ease infinite; 
+}
+
+#meus-templates {/*degrade*/
+    background: linear-gradient(132deg, rgba(187,93,213,1) 0%, rgba(255,152,34,1) 100%);
+    background-size: 150% 150%; 
+    animation: muda-degrade 5s ease infinite; 
+}
+
+#container-athena {    
+    background: radial-gradient(circle, rgba(73,117,215,1) 0%, rgba(70,70,182,1) 26%, rgba(25,25,75,1) 83%);
+    background-size: 150% 150%;
+    animation: aumenta-degrade 15s ease infinite;    
+}
+
+    #modo-athena {
+        background: url(/SEIA/media/vetores/estrelas.svg) no-repeat center right;
+        background-origin: content-box;
+        background-size: 200% 200%;
+        background-position: 50% 50%;
+    }

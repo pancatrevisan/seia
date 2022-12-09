@@ -1,0 +1,832 @@
+@media (max-width: 999px) { /*tela-inicial*/
+ 
+    #tela-inicial .desenho-e-texto { 
+        display: block; 
+    } 
+ 
+    #tela-inicial .texto, #tela-inicial .desenho { 
+        width: 100%; 
+        display: block; 
+        margin: 0; 
+        margin-bottom: 8vh;         
+    } 
+ 
+    #tela-inicial h1, #tela-inicial p { 
+        text-align: center; 
+        padding: 0; 
+    } 
+ 
+    .desenho-e-texto .texto { 
+        display: flex; 
+        justify-content: center; 
+    } 
+ 
+    .texto .barra-horizontal { 
+        display: flex; 
+        justify-content: space-between; 
+        width: 80%; 
+        margin-left: 10%; 
+        margin-right: 10%; 
+    } 
+ 
+    #tela-inicial .texto .texto-conteudo { 
+        padding-left: 0; 
+        margin: 0; 
+        width: 100%; 
+    } 
+ 
+    #tela-inicial .desenho-e-texto .desenho { 
+        width: 100%; 
+        display: flex; 
+        justify-content: space-around; 
+    } 
+ 
+        #tela-inicial .desenho img { 
+            display: inline-block; 
+            align-content: flex-start; 
+            max-width: 32vw; 
+        } 
+ 
+        #tela-inicial .desenho img#balao { 
+            display: block; 
+            max-width: 30vw; 
+        } 
+ 
+        #tela-inicial .desenho img#nuvens { 
+            margin-top: -12vh; 
+            position: absolute; 
+            min-height: 50vh; 
+            max-height: 90vh; 
+        } 
+ 
+} 
+ 
+@media (max-width: 1200px) { /*header*/
+     
+    body { 
+        overflow-x: hidden; 
+    }
+
+    #header-normal {padding: 0 2vh;}
+ 
+    #header-normal .logo { 
+        width: 40vw; 
+        height: auto; 
+    } 
+ 
+    #header-branco .logo { 
+        width: 30vw; 
+    } 
+ 
+    #header-branco nav {padding-right: 0;}
+     
+    #header-normal ul {
+        display: none;
+        position: absolute;
+        top: 20vh; 
+        right: 0; 
+        width: 45vw;
+        flex-direction: column; 
+        align-items: center; 
+        justify-content: space-around;
+        z-index: 2; 
+        padding: 0;
+        padding-bottom: 1.5vh;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+        color: #fff;        
+    } 
+ 
+        #header-normal ul {background: #22499c;} 
+ 
+        #header-branco ul {background: white;} 
+ 
+    #header-normal ul li {
+        display: flex;
+        margin-left: 0; 
+        width: 100%; 
+        padding: 25px 0px;
+        align-items: center;
+        color: #fff;
+    }
+ 
+    #header-normal a {
+        display: flex;
+        align-items: center; 
+        justify-content: center; 
+        width: 100%; 
+        color: #fff;
+    }
+ 
+    #header-normal .mobile-menu { 
+        display: block; 
+        justify-content: center; 
+        align-items: center;
+        color: #fff;
+    } 
+
+    #header-normal .mobile-menu div { 
+        display: flex; 
+        margin-right: 0; 
+        margin-left: 0;
+        color: #fff;
+    }
+ 
+}
+
+@media (max-width: 999px) { /*footer*/
+    
+    footer { 
+        padding: 8vw;
+        min-height: auto;
+    }
+
+        footer div {
+            flex-direction: column;
+            align-items: center;
+        }
+
+            footer div .contato {
+                width: 100%;
+                text-align: center;
+            }
+
+}
+ 
+@media (max-width: 999px) { /*tela login*/ 
+ 
+    #tela-login, #tela-login .desenho-e-texto { 
+        display: block; 
+    } 
+ 
+    #tela-login .texto, #tela-login .desenho { 
+        width: 100%; 
+    } 
+ 
+    #tela-login .texto {display: block;} 
+ 
+    #tela-login .texto input { 
+        max-width: 94%; 
+        margin-right: 0; 
+    } 
+ 
+    #tela-login .alert { 
+        width: auto; 
+        text-align: center; 
+    } 
+ 
+    #tela-login .barra-vertical { 
+        display: none; 
+    } 
+ 
+    #tela-login .barra-horizontal { 
+        display: block; 
+        width: 100%; 
+        height: 3px; 
+        margin: 5vh 0; 
+        background: #adb7ca; 
+    } 
+ 
+    #tela-login form { 
+        width: 100%; 
+    } 
+ 
+    #tela-login #cerebro-carregando img { 
+        min-width: 80%; 
+    } 
+ 
+} 
+ 
+@media (max-width: 999px) { /*tela cadastro*/ 
+ 
+    p.texto-conteudo {text-align: center;} 
+ 
+    h3 {text-align: center;} 
+ 
+    .barra-vertical {display: none;} 
+ 
+    .desenho-e-texto {display: block;} 
+ 
+    #pg-cadastro .texto { 
+        width: 100%; 
+        display: block; 
+    } 
+ 
+    #pg-cadastro input.form-control {max-width: 94%;} 
+ 
+    #pg-cadastro textarea {max-width: 94%;} 
+     
+    #pg-cadastro section { 
+        width: 100%; 
+        padding-left: 0; 
+        margin-top: 6vh; 
+    } 
+ 
+    #pg-cadastro .alinhar-ao-centro { 
+        display: flex; 
+        justify-content: space-around; 
+        margin-top: 6vh; 
+    } 
+ 
+    #pg-cadastro .checkbox-termos { 
+        width: auto; 
+        justify-content: space-around; 
+    } 
+ 
+    #pg-cadastro .checkbox-termos .texto-conteudo { 
+        padding-left: 2vw; 
+    } 
+ 
+}
+ 
+@media (max-width: 1200px) { /*menu*/ 
+ 
+    .menu img.logo {max-width: 20%;} 
+ 
+    .menu div.icone-usuario { 
+        min-width: 17vw; 
+        min-height: 17vw; 
+    } 
+ 
+    .menu div.icone-usuario .mais-usuario { 
+        width: 20vw; 
+        height: 20vw; 
+        border-radius: 100%; 
+    }
+
+    #header-normal nav .menu-links {
+        display: none;
+        margin-top: -5vh;
+    }
+ 
+} 
+ 
+@media (max-width: 1100px) { /*titulo da pagina*/ 
+ 
+    .header-titulo { 
+        display: block; 
+    } 
+ 
+    .header-titulo .desenho-e-texto { 
+        display: block; 
+    } 
+ 
+    .header-titulo .texto { 
+        display: block; 
+        width: 100%; 
+    } 
+ 
+    .header-titulo h1 { 
+        width: 100%; 
+        text-align: center;
+        font-size: 34pt;
+    } 
+ 
+    .header-titulo p { 
+        width: 100%; 
+        text-align: center; 
+        margin-bottom: 5vh; 
+    } 
+ 
+    .header-titulo .desenho { 
+        width: 100%; 
+        display: flex; 
+        flex-direction: column; 
+        justify-content: center; 
+        align-items: center; 
+        max-height: 30vh; 
+    } 
+ 
+    .header-titulo img { 
+        min-width: 60%; 
+    } 
+ 
+} 
+ 
+@media (max-width: 1100px) { /*area titulo 2*/
+
+    .titulo-pagina h1 {
+        width: 100%;
+        font-size: 28pt;
+        letter-spacing: 0;
+    }
+ 
+    .titulo-pagina .texto .barra-horizontal { width: 100%; } 
+     
+    .titulo-pagina p { width: 100%; } 
+ 
+} 
+ 
+@media (max-width: 999px) { /*barra de pesquisa*/ 
+ 
+    .barra-pesquisa { 
+        display: flex; 
+        flex-direction: column; 
+        height: auto; 
+        width: 100%; 
+        justify-content: center; 
+        align-items: center; 
+        margin-bottom: 3vh; 
+    } 
+ 
+    .barra-pesquisa form { 
+        width: 100%; 
+    } 
+ 
+    .barra-pesquisa .form-group { 
+        margin: 2vh 0; 
+        width: 100%; 
+        height: 6vh; 
+        display: flex; 
+        align-items: center; 
+    } 
+ 
+    .barra-pesquisa a { 
+        display: flex; 
+        justify-content: center; 
+        width: 100%; 
+    } 
+ 
+    .barra-pesquisa a p { 
+        width: 100%; 
+    } 
+ 
+} 
+ 
+@media (max-width: 999px) { /*área dos cards*/ 
+ 
+    .card-columns { display: block; }
+ 
+} 
+ 
+@media (max-width: 999px) { /*paginação*/ 
+ 
+    ul.pagination { 
+        width: 100%; 
+        justify-content: space-around; 
+    }     
+ 
+} 
+ 
+@media (max-width: 999px) { /*mudar senha*/ 
+ 
+    .container-senha form { 
+        width: 100%; 
+        padding: 0; 
+    } 
+ 
+    .container-senha .container-botao button { 
+        width: 100%; 
+    } 
+}
+
+@media (max-width: 999px) { /*janelas modais*/ 
+
+    .bd-example-modal-xl {
+        padding: 15vh 5vh;
+    }
+    
+        .bd-example-modal-xl .modal-dialog {
+            width: 85vw;
+            margin: 0;
+            margin-left: -5vw;
+        }
+
+            .modal-dialog .modal-content .fechar-modal {
+                display: flex;
+                min-width: 8vh; 
+                min-height: 8vh;
+                right: 50vw;
+                top: 12vh;
+                border-radius: 100%; 
+                background: #da3f3f; 
+                cursor: pointer; 
+                transition: 0.5s; 
+                border: 7px solid #fff; 
+            }
+}
+
+@media (max-width: 999px) { /*templates e wizard*/
+
+    #templates .row .container .row-2 {display: block;}
+}
+
+@media (max-width: 999px) { /*opcoes dos cards*/
+
+    h4 .container-fluid {
+        position: fixed;
+        height: 100%;
+    }
+
+    h4 .container-fluid div {
+        padding: 5vh 0;
+        background: #fff;
+        position: fixed;
+        bottom: 0;
+    }
+}
+
+@media (max-width: 999px) { /*página inicial*/
+
+    #pagina-inicial {padding: 5vh;}
+
+    #pagina-inicial .col-10  a .card {
+        flex-direction: column;
+        height: auto;
+    }    
+
+    #pagina-inicial .col-10 a .card .card-body {width: 100%;}
+
+    #pagina-inicial .col-10 a .card h2 {text-align: center;}
+
+    #pagina-inicial .col-10 a .card .card-body .barra-horizontal {margin-bottom: 2vh;}
+
+    #pagina-inicial .col-10 a .card img {display: none;}
+
+    #pagina-inicial .col-10 a .card-text {text-align: center;}
+}
+
+@media (max-width: 999px) { /*informações dos estudantes nas paginas especificas*/
+
+    .row-2 .student-tools button img {
+        min-width: 25px;
+    }
+
+    .row-2 .student-tools button a {
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 999px) { /*informações dos estudantes nas paginas especificas*/
+
+    #programacoes .row-2 { display: block; }
+
+    #programacoes .col-3 { display: block; }
+
+    #programacoes .row-2 .col-3 .card {
+        display: block;
+        width: 100%;
+    }
+
+        #programacoes .col-3 .card .row {
+            min-width: 27vw;
+            min-height: 27vw;
+        }
+
+        #programacoes .col-3 .card .row .col {
+            width: 90%;
+            height: 90%;
+        }
+
+        #programacoes .row-2 .col-3 .card .card-body {
+            margin: 0;
+            margin-top: 3vh;
+        }
+
+        #programacoes .row-2 .col-3 .card .card-body p {text-align: center;}
+
+        #programacoes .row-2 .col-3 .card .card-body .titulo-card { font-size: 12pt; }
+
+        #programacoes .row-2 .col-3 .card .card-body .card-text { font-size: 10pt; }
+
+        #programacoes .student-tools .row { width: 100%; }
+
+            #programacoes .student-tools .row .col { width: 100%; }
+
+            #programacoes .student-tools .row .col button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            #programacoes .student-tools .row .col button a { 
+                display: flex;
+                justify-content: center;
+                width: auto;
+                font-size: 11pt;
+                text-align: left;
+            }
+
+                #programacoes .student-tools .row .col button img {
+                    width: 5vw;
+                    height: 5vw;
+                    margin-right: 4vw;
+                }
+}
+
+@media (max-width: 999px) { /*cadastrar novo estudante*/
+
+    .form-professional .form-group.row {
+        box-sizing: border-box;
+        display: block;
+    }
+
+        .form-professional .form-group.row .col-sm-3 {
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+            .form-professional .form-group.row .col-sm-3 select {
+                width: 100%;
+                display: block;
+                box-sizing: border-box;
+                background-size: 3.5vw 3.5vw;
+            }
+
+            .form-professional .form-group.row .col-sm-3 label {
+                display: block;
+                box-sizing: border-box;
+                width: 100%;
+            }
+
+        .form-professional .form-group.row .col-sm-9 {
+            width: 100%;
+            display: block;
+            box-sizing: border-box;
+            margin-bottom: 3vh;
+        }
+
+    .form-professional .input-estimulos {
+        display: block;
+        box-sizing: border-box;
+    }   
+
+        .form-professional .input-estimulos .form-group {
+            width: 100%;
+            box-sizing: border-box;
+            display: block;
+        }
+
+            .form-professional .input-estimulos .form-group label { margin-bottom: 1vh; }
+
+            .form-professional .input-estimulos .form-group .col-sm-3 { width: 100%; }
+
+                .form-professional .input-estimulos .form-group .col-sm-3 select {
+                    width: 100%;
+                    background-size: 3.5vw 3.5vw;
+                }            
+
+    .container-botao {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .container-botao .btn-lg {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .container-botao button p {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: 999px) { /*programar sessoes de ensino*/
+    
+    #programacoes .card-body .botoes-prog button img {
+        min-width: 5vw;
+        min-height: 5vw;
+        padding-right: 5vw;
+    }
+}
+
+@media (max-width: 999px) { /*configurar curriculo*/
+
+    #activities .row .col-8 {
+        display: block;
+    }
+
+    #activities .row .col-8 .titulo {
+        width: 100%;
+        margin-bottom: 3vh;
+    }
+
+    #activities .row .programacao-opcoes button {
+        width: 12vw;
+        height: 12vw;
+    }
+     
+}
+
+@media (max-width: 999px) { /*editar perfil*/
+
+    .row-2 { display: block; }
+
+    .row-2 .col-3 .row { margin-left: 30vw; }
+
+    .row-2 .col-3 { width: 100%; }
+
+    .row-2 .col-3 p input { padding: 10px 0; }
+
+        .student-tools {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+            .student-tools .row {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                margin-top: 0;
+            }
+
+                .student-tools .row .col {width: 100%;}
+
+                .student-tools .row .col button {
+                    width: 100%;
+                    padding: 10px 20px;
+                    margin: 1.5vh 0;
+                    display: flex;
+                    justify-content: center;
+                }
+
+                .student-tools .row .col button a {
+                    font-size: 11pt;
+                    text-align: center;
+                }
+
+    .col-9 .alert-primary {display: block;}
+
+        .col-9 .alert-primary .col {min-width: 100%;}
+
+        .col-9 .alert-primary .col p {width: 100%;}
+
+    .col-9 .m-1 .col {
+        display: block;
+        box-sizing: border-box;
+    }
+
+        .col-9 .m-1 .col button {
+            margin: 0;
+            margin-bottom: 2vh;
+            width: 100%;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: center;
+            font-size: 11pt;
+            text-align: left;
+        }
+
+        .col-9 .m-1 .col button img {
+            width: 5vw;
+            height: 5vw;
+            margin-right: 5vw;
+        }
+}
+
+@media (max-width: 999px) { /*adicionar nova programacao*/
+
+    #activities .col-8 {flex-direction: column;}
+
+        #activities .col-8 .titulo .circulo-azul {
+            min-width: 40px;
+            min-height: 40px;
+        }
+
+            #activities .col-8 .programacao-opcoes button {
+                min-width: 40px;
+                min-height: 40px;
+                margin: 0 1vh;
+            }
+
+            #sessionProgram #theContent #activities .row .col .collapse {
+                border-left: 4px #22499c solid;
+                margin: 0;
+                margin-left: 1.7vh;
+                padding-left: 3vh;
+                box-sizing: border-box;
+                width: auto;
+            }
+
+    #activityContainerContent {padding: 0;}
+
+        #activityContainerContent .card {height: auto;}
+
+        #activityContainerContent .card h4 {
+            max-height: 3vh;
+            overflow-y: hidden;
+        }
+
+            #activityContainerContent .card h4 .titulo-card {
+                max-height: 3vh;
+                overflow-y: hidden;
+            }
+
+    #groups .col-8 .row .col-8 {
+        flex-direction: column;
+        margin-top: 3vh;
+        margin-bottom: 0;
+    }
+
+        #groups .col-8 .row .col-8 button {
+            min-width: 100%;
+            margin-top: 5px;
+            font-size: 12pt;
+            justify-content: flex-start;
+        }
+
+            #groups .col-8 .row .col-8 button img {
+                min-width: 20px;
+                min-height: 20px;
+            }
+
+    #groups .col .alert-primary .col-8 {flex-direction: column;}
+
+        #groups .col .alert-primary .col-8 .titulo {margin-bottom: 2vh;}
+
+            #groups .col .alert-primary .col-8 .titulo .circulo-azul {
+                min-width: 30px;
+                min-height: 30px;
+            }
+
+        #groups .col .alert-primary .col-8 .programacao-opcoes {min-width: 100%;}
+
+            #groups .col .alert-primary .col-8 .programacao-opcoes button {
+                min-width: 40px;
+                min-height: 40px;
+            }
+
+                #groups .col .alert-primary .col-8 .programacao-opcoes button img {width: 60%;}
+
+    #activityInfo .row .row .col {
+        flex-direction: column;
+        width: 100%;
+        box-sizing: border-box;
+        margin: 0;
+        margin-bottom: 2vh;
+    }
+
+        #activityInfo .row .row .col .col-8 {min-width: 100%;}
+
+            #activityInfo .row .row .col .col-8 input {min-width: 100%;}
+
+            #activityInfo #groups .row .col .row .col-8 .row .col-8 button {
+                margin-bottom: 1vh;
+            }
+
+    #edit {display: none;}
+}
+
+@media (max-width: 999px) { /*mudar para tela cheia*/
+
+    #fullScreenMessage button {
+        min-width: 100%;
+        margin: 0;
+    }
+}
+
+@media (max-width: 999px) { /*editor de atividades*/
+
+    #activityInfo .alert-primary {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #activityInfo .alert-primary .col-sm-2 {
+        min-width: 100%;
+        margin-bottom: 1.5vh;
+        box-sizing: border-box;
+    }
+
+        #activityInfo .alert-primary .col-sm-2 .col-sm-6 {min-width: 100%;}
+
+        #activityInfo .alert-primary .col-sm-2 select {
+            width: auto;
+            box-sizing: border-box;
+        }
+
+    #activityInfo .alert-primary .col {
+        min-width: 100%;
+        box-sizing: border-box;
+    }
+
+    #editableInstructions .card {
+        flex-direction: column;
+    }
+
+    #editableInstructions .card h3 {
+        min-width: 100%;
+    }
+
+    #editableInstructions .card a {
+        min-width: 100%;
+        margin-top: 2vh;
+    }
+
+        #editableInstructions .card a img {
+            width: 3vw;
+        }
+}
+
+@media (max-width: 999px) { /*modo athena*/
+
+    #athena .card-columns {
+        display: flex;
+        flex-direction: column;
+    }
+
+        #athena .card {width: 100%;}
+}

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 23.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg
+   version="1.1"
+   id="Layer_1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 3000 3000"
+   style="enable-background:new 0 0 3000 3000;"
+   xml:space="preserve"
+   sodipodi:docname="salvar_como_nova_atividade.svg"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:i="&amp;ns_ai;"><defs
+   id="defs19" /><sodipodi:namedview
+   id="namedview17"
+   pagecolor="#ffffff"
+   bordercolor="#000000"
+   borderopacity="0.25"
+   inkscape:showpageshadow="2"
+   inkscape:pageopacity="0.0"
+   inkscape:pagecheckerboard="0"
+   inkscape:deskcolor="#d1d1d1"
+   showgrid="false"
+   inkscape:zoom="0.279"
+   inkscape:cx="1498.2079"
+   inkscape:cy="1498.2079"
+   inkscape:window-width="1920"
+   inkscape:window-height="1017"
+   inkscape:window-x="-8"
+   inkscape:window-y="-8"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="Layer_1" />
+<style
+   type="text/css"
+   id="style2">
+	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#141414;}
+	.st1{fill:#020202;}
+</style>
+<switch
+   id="switch14"
+   style="fill:#ffffff">
+	<foreignObject
+   requiredExtensions="http://ns.adobe.com/AdobeIllustrator/10.0/"
+   x="0"
+   y="0"
+   width="1"
+   height="1">
+		
+	</foreignObject>
+	<g
+   i:extraneous="self"
+   id="g12"
+   style="fill:#ffffff">
+		<g
+   id="g8"
+   style="fill:#ffffff">
+			<path
+   class="st0"
+   d="M1088.55,90.76v456.86c0,8.85,3.6,16.87,9.4,22.67c5.8,5.8,13.82,9.4,22.68,9.4h182.02     c8.85,0,16.88-3.6,22.68-9.4c5.8-5.8,9.4-13.82,9.4-22.67V90.76c0-8.84-3.6-16.87-9.4-22.67c-5.8-5.8-13.83-9.4-22.68-9.4     h-182.02c-8.85,0-16.87,3.59-22.68,9.4C1092.16,73.89,1088.55,81.92,1088.55,90.76z"
+   id="path4"
+   style="fill:#ffffff" />
+			<path
+   class="st0"
+   d="M1156.46,1794.13H476.43c-41.09,0-74.71-33.62-74.71-74.71v-572.88c0-41.09,33.62-74.71,74.71-74.71h996.05     c41.09,0,74.71,33.62,74.71,74.71v572.88c0,6.5-0.85,12.8-2.42,18.82h198.39v-392.75c0-137.61,85.28-255.67,205.76-304.13V244.53     L1704.39,0h-273.97v638.38H518.5V0H81.46C36.65,0,0,36.65,0,81.46v1786.01c0,44.8,36.65,81.46,81.46,81.46h951.79     C1057.55,1885.55,1100.98,1831.57,1156.46,1794.13z"
+   id="path6"
+   style="fill:#ffffff" />
+		</g>
+		<path
+   class="st1"
+   d="M2866.14,2257.37h-603.86v614.97c0,70.22-57.45,127.66-127.66,127.66h-63.8    c-70.22,0-127.66-57.45-127.66-127.66v-614.97H1339.3c-70.22,0-127.66-57.45-127.66-127.66v-63.8    c0-70.22,57.45-127.66,127.66-127.66h603.86v-592.75c0-70.22,57.45-127.66,127.66-127.66h63.8c70.22,0,127.66,57.45,127.66,127.66    v592.75h603.86c70.22,0,127.66,57.45,127.66,127.66v63.8C2993.8,2199.93,2936.36,2257.37,2866.14,2257.37z"
+   id="path10"
+   style="fill:#ffffff" />
+	</g>
+</switch>
+
+</svg>

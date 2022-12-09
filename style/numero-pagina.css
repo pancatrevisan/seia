@@ -1,0 +1,57 @@
+.conteiner-pagination { 
+    box-sizing: border-box; 
+    width: 100%; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    margin-bottom: 5vh; 
+} 
+ 
+ul.pagination { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    min-width: 10vw; 
+    padding: 1.5vh 2vh; 
+    border-radius: 5px; 
+    background: #22499c; 
+} 
+ 
+ul.pagination a { 
+    text-decoration: none; 
+    color: #fff; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    transition: 1s; 
+    margin: 0 1.5vh; 
+} 
+ 
+ul.pagination li { 
+    list-style: none; 
+    font-family: "Righteous"; 
+    font-size: 16pt; 
+    min-width: 2.5vw; 
+    min-height: 2.5vw; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    transition: 1s; 
+    cursor: pointer;     
+} 
+ 
+    ul.pagination .page-item:hover { 
+        background: #fff; 
+    } 
+ 
+    ul.pagination a .page-item:hover { 
+        color: #22499c; 
+    } 
+ 
+    ul.pagination .voltar-avancar:hover { 
+        opacity: 0.7; 
+    } 
+ 
+ul.pagination a li img { 
+    width: 30px; 
+}

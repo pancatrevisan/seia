@@ -1,0 +1,181 @@
+#editableInstructionsRow h3 {
+    text-transform: uppercase;
+    font-size: 14pt;
+}
+
+#editableInstructions .card { /*titulo do template*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    background: #eceff5;
+    padding: 4vh;
+    margin-bottom: 3vh;
+}
+
+    #editableInstructions .card a { /*botao de editar*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 24%; 
+        border: none; 
+        border-radius: 5px; 
+        padding: 15px 10px; 
+        font-family: "Righteous"; 
+        font-size: 14pt; 
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: white; 
+        background: #22499c; 
+        cursor: pointer; 
+        transition: 1s;
+    }
+
+        #editableInstructions .card a:hover {opacity: 0.7;}
+
+        #editableInstructions .card img {
+            width: 1.5vw;
+            margin-right: 2vh;
+        }
+
+    #editableInstructions .card h3 { /*nome do template*/
+        text-transform: uppercase;
+        width: 70%;
+        margin: 0;
+    }
+
+#edit { /*container nome template + ferramentas + editor*/
+    display: none;
+    position: fixed;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 5vh;
+    background: #fff;
+    overflow-x: hidden;
+}
+
+#buttonContent { /*titulo do template*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4vh;
+    padding: 4vh;
+    background: #eceff5;
+    border-radius: 5px 5px 0 0;
+}
+
+    #buttonContent #editInstructionName {
+        text-transform: uppercase;
+        margin-bottom: 0;
+    }
+
+    #closeEditor { /*botão de fechar o editor*/
+        width: 10vh; 
+        height: 10vh; 
+        border-radius: 100%; 
+        background: #da3f3f; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer; 
+        transition: 0.5s; 
+        border: 3px solid #fff; 
+    }
+
+        #closeEditor:hover {background: #ec7272;} 
+    
+        #closeEditor img {width: 40%;}
+        
+#content { /*container ferramentas + canvas*/
+    display: flex;
+    justify-content: center;
+}
+
+    #controls { /*ferramentas do editor*/
+        display: block;
+        width: 22%;
+        margin-right: 3vh;
+    }
+
+        #controls button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%; 
+            border: none; 
+            border-radius: 5px; 
+            padding: 15px 10px; 
+            font-family: "Righteous"; 
+            font-size: 12pt; 
+            text-align: left;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: white; 
+            background: #22499c; 
+            cursor: pointer; 
+            transition: 1s;
+            margin-bottom: 2vh;
+        }
+
+            #controls button img {
+                width: 2vw;
+                margin-right: 2vh;
+            }
+
+#filterSdasdaf { /*barra de pesquisa da janela modal do seletor de estimulos*/
+    display: flex;
+}
+
+    #filterSdasdaf .barra-pesquisa {
+        margin-bottom: 2vh;
+    }
+
+    #filterSdasdaf .form-row {
+        min-width: 100%;
+        box-sizing: border-box; 
+        height: 6vh; 
+        margin: 0; 
+        padding: 0 10px; 
+        display: flex; 
+        justify-content: left; 
+        background: #eceff5; 
+        border: 2px solid #adb7ca;        
+    }
+
+    #filterSdasdaf .form-row input { 
+        text-transform: uppercase; 
+        box-sizing: border-box; 
+        font-family: "Righteous"; 
+        letter-spacing: 1px; 
+        width: 100%; 
+        height: 100%;         
+        padding: 0 10px; 
+        margin: 0; 
+        background: transparent; 
+        border: none; 
+    }
+
+    #filterSdasdaf .form-row button { 
+        box-sizing: border-box;
+        border: none;
+        width: auto; 
+        height: 100%; 
+        margin: 0; 
+        padding: 0; 
+        border-radius: 0; 
+        background: transparent; 
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+    } 
+ 
+    #filterSdasdaf .form-row button img { 
+        width: 35px;        
+        margin-right: 10px; 
+    }
+
+    i {margin-right: 2vh;}

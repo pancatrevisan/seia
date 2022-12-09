@@ -1,0 +1,86 @@
+@keyframes cima-baixo { /*animação que vai de cima para baixo*/ 
+    0% { 
+        transform: translateY(0); 
+    } 
+    25%{ 
+        transform: translateY(-10px);  
+    } 
+    50% { 
+        transform: translateY(0px); 
+    } 
+    75% { 
+        transform: translateY(-10px); 
+    }            
+    100% { 
+        transform: translateY(0); 
+    } 
+} 
+ 
+@keyframes esquerda-direita { /*animação que vai de um lado para o outro*/ 
+    0% { 
+        transform: translateX(0); 
+    } 
+    25%{ 
+        transform: translateX(-15px);  
+    } 
+    50% { 
+        transform: translateX(0px); 
+    } 
+    75% { 
+        transform: translateX(-15px); 
+    }            
+    100% { 
+        transform: translateX(0); 
+    } 
+}
+ 
+@keyframes janela-modal {/*animação que faz a janela modal aparecer com fade-in*/ 
+    0% {opacity: 0;} 100% {opacity: 1;} 
+} 
+ 
+@keyframes navLinkFade { /*animação do menu mobile navbar*/ 
+    from { 
+        opacity: 0; 
+        transform: translateX(50px); 
+    } 
+    to { 
+        opacity: 1; 
+        transform: translateX(0) 
+    } 
+} 
+ 
+@keyframes muda-degrade { 
+    0% { 
+        background-position: 0% 50%; 
+    } 
+    50% { 
+        background-position: 100% 50%; 
+    } 
+    100% { 
+        background-position: 0% 50%; 
+    } 
+}
+
+@keyframes aparece-desaparece {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes aumenta-degrade {
+    0% { 
+        background-size: 100% 100%;
+        background-position: 50% 50%;
+    }
+    50% { 
+        background-size: 200% 200%;
+        background-position: 50% 50%;
+    }
+    100% { 
+        background-size: 100% 100%;
+        background-position: 50% 50%;
+    } 
+}
