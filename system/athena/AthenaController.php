@@ -37,6 +37,18 @@ class AthenaController extends Controller {
 
     }
 
+    public function blockUnblockUser($params=[]){
+        $data = [];
+        
+        global $lang;
+        $data['page_title'] = $lang['page_name'];
+        $this->loadView(ROOTPATH . "/ui/header.php", $data);
+        $this->loadView("views/user_block_unblock.php", $data);
+        $this->loadView(ROOTPATH . "/ui/footer.php", $data);
+
+
+    }
+
     public function generalStats($params=[]){
         $data = [];
         

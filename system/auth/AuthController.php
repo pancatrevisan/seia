@@ -186,7 +186,14 @@ class AuthController extends Controller
         $this->loadView('views/login.php',$data);
     }
   
-    
+    public function blockedUserPresentInformation($params=[]){
+        global $sel_lang;
+        require_once ROOTPATH . '/lang/' . $sel_lang . "/auth/login.php";
+        $data = [];
+       
+        $data["page_name"] = $lang['page_name'];
+        $this->loadView('views/blocked_user.php',$data);
+    }
     public function login($param=[]){
         global $sel_lang;
         require_once ROOTPATH . '/lang/' . $sel_lang . "/auth/login.php";
@@ -201,6 +208,14 @@ class AuthController extends Controller
         
         if(password_verify($pass,$res['pass']))
         {
+            print_r($res);
+            
+            if($res['active'] == 0){
+                
+                $url = BASE_URL . "/auth?action=blockedUserPresentInformation";   
+                header("location:$url");
+                die("");
+            }
             
             $_SESSION['username'] =  strtolower($username);
             $_SESSION['role'] = $res['role'];
@@ -229,9 +244,9 @@ class AuthController extends Controller
         else{
             $url = BASE_URL . "/auth?action=loginForm&error=true";   
             header("location:$url");
+            die("");
         } 
-       echo "SQL: $SQL <br>";
-        print_r($res);
+       
         //$this->loadView("views/login.php',$data);
     }
     
@@ -376,6 +391,7 @@ class AuthController extends Controller
 
     public function newUser($param=[]){
         $data = [];
+        $active     = FALSE;
         if(isset($param['first_admin'])){
             $username   = $param['signup_username'];
             $name       = "SEIA Admin";
@@ -386,7 +402,7 @@ class AuthController extends Controller
             $comment    = "admin";
             $role       = 'professional';
             $athena     = TRUE;
-
+            $active     = TRUE;
         }
         else if(isset($_POST['signup_username']))
         {
@@ -430,7 +446,7 @@ class AuthController extends Controller
 
 
         $SQL = "INSERT INTO user(username, name, email, pass, city, comment,role, active,athena) " .
-                "VALUES ('$username', '$name','$email','$pass','$city','$comment','$role', FALSE,'$athena')";
+                "VALUES ('$username', '$name','$email','$pass','$city','$comment','$role', '$active','$athena')";
         
         
         if($db->query($SQL)){

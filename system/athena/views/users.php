@@ -116,11 +116,11 @@
 
                 <?php if ($fetch['role'] == "tutor") { ?>
 
-                    <div class="card text-white bg-info border-dark" id="<?php echo $fetch['id']; ?>">
+                    <div class="card text-white bg-info border-dark" id="<?php echo $fetch['username']; ?>">
                     
                 <?php } else if ($fetch['role'] == 'professional') { ?>
 
-                    <div class="card text-white bg-success border-dark" id="<?php echo $fetch['id']; ?>">
+                    <div class="card text-white bg-success border-dark" id="<?php echo $fetch['username']; ?>">
 
                 <?php } ?>
 
@@ -130,13 +130,29 @@
                         </div>
 
                         <h4 class="card-header border-dark">
-                            <p class="titulo-card"><?php echo $fetch['name']; ?></p>
+                            <p class="titulo-card"><?php echo $fetch['name']; ?>
+                        
+                            <?php if ($fetch['active'] == 0){
+                                ?>
+                                    <i  class="fa-sharp fa-solid fa-lock"></i>
+                                <?php 
 
-                            <div class="ver-mais" onclick="mostraOpcoes('<?php echo $fetch['id'];?>')">
+                            }else 
+                            {
+                                ?> 
+                                    <i class="fa-solid fa-lock-open"></i>
+                                <?php 
+                            }
+                            ?>
+                        
+                        </p>
+
+                            <div class="ver-mais" onclick="mostraOpcoes('<?php echo $fetch['username'];?>')">
                                 <div class="bolinha"></div>
                                 <div class="bolinha"></div>
                                 <div class="bolinha"></div>
                             </div>
+                            
 
                             <div class="dropdown-menu container-fluid" aria-labelledby="dropdownMenuButton">
                                 <div>
@@ -150,9 +166,28 @@
                                         <a class="dropdown-item" href="<?php echo BASE_URL; ?>/athena/index.php?action=viewUserAccessLog&user=<?php echo $fetch['username']; ?>">
                                             <p>Logs de acesso</p>
                                         </a>
+                                        <?php if ($fetch['active'] == 0){
+                                            ?>
+                                                 <a class="dropdown-item" href="<?php echo BASE_URL; ?>/athena/index.php?action=blockUnblockUser&option=unblock&user=<?php echo $fetch['username']; ?>">
+                                            <p>Desbloquear</p>
+                                             </a>
+                                            <?php 
+
+                                        }else 
+                                        {
+                                            ?> 
+                                                     <a class="dropdown-item" href="<?php echo BASE_URL; ?>/athena/index.php?action=blockUnblockUser&option=block&user=<?php echo $fetch['username']; ?>">
+                                            <p>Bloquear</p>
+                                             </a>
+                                            <?php 
+                                        }
+                                        ?>
+                                       
+                                        
                                     </div>
                                 </div>
-                            </div>                        
+                            </div>  
+                                                  
                         </h4>
                     </div>
 
@@ -249,3 +284,7 @@
         </div>
     </div>
 </div>
+
+<script>
+
+</script>

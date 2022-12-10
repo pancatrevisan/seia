@@ -148,6 +148,10 @@
                 <button class="btn btn-outline-secondary" disabled type="button" id="recordButton" onclick="recordAudio()"><i class="fas fa-microphone"></i></button>
             </div><!--selecionar arquivo--> 
 
+            <div class="container" id="preview">
+                Selecione um arquivo.
+            </div>
+
             <div class="container-botao">
                 <button type="button" class="btn btn-primary btn-lg btn-block botao_cadastrar" onclick="modal_addImage(event)">
                     <p>Cadastrar<?php //echo $lang['stimuli_next']; ?></p>

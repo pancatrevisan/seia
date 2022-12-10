@@ -41,6 +41,7 @@
     <script type="text/javascript" id="www-widgetapi-script" src="https://s.ytimg.com/yts/jsbin/www-widgetapi-vfl2dBoXz/www-widgetapi.js" async=""></script>  
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="<?php echo BASE_URL;?>/external/enjoyhint/enjoyhint.js"></script>
+    <script src="https://kit.fontawesome.com/9baefea985.js" crossorigin="anonymous"></script>
 </head>
 
 <?php require(ROOTPATH ."/ui/menu.php")?>
