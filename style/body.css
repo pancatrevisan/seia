@@ -743,6 +743,51 @@ footer {
 
 /*pagina para criar novo estímulo*/
 
+#form .container-botao button { /*botao escrito cadastrar no final da pagina*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 9vh;
+    margin-top: 4vh;
+    padding: 2vh;
+    background: #22499c;
+    font-family: "Righteous";
+    font-size: 14pt;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 1s;
+    text-transform: uppercase;
+}
+
+    #form button:hover {opacity: 0.7;}
+
+#recordButton { /*botao de gravar audio*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    #recordButton i {margin-left: 1vh;}
+
+#form #preview { /*area onde aparece a foto do estimulo*/
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    background: #eceff5;
+    border-radius: 5px;    
+    padding: 0 2vh;
+    box-sizing: border-box;
+}
+
+    #form #preview img {
+        max-width: 20vw;
+        max-height: 40vh;
+    }
+
 .form-professional {
     width: 100%;
     margin-bottom: 5vh;
@@ -761,13 +806,6 @@ footer {
     font-family: "Righteous";
     font-weight: 100;
 }
-
-    .form-professional .form-group textarea {height: 10vh;}
-
-    /*.form-professional .row {
-        display: flex; 
-        justify-content: right;
-    }*/
 
 .form-professional .input-estimulos {
     display: flex;
@@ -842,7 +880,7 @@ footer {
     width: 100%;
     max-height: 50vh;
     border-radius: 5px;
-    margin-bottom: 5vh;
+    margin-bottom: 2vh;
     border: 2px solid #adb7ca;
     overflow: hidden;
 }

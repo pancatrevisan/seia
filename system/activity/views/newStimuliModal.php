@@ -102,7 +102,7 @@
 
             <div class="form-group">
                 <label class="label-cadastro" for="stimuli_description">Descrição:</label>
-                <textarea required type="text" class="form-control" id="stimuli_description" name="stimuli_description" value="<?php echo $desc_val;?>"></textarea>
+                <input required type="text" class="form-control" id="stimuli_description" name="stimuli_description" value="<?php echo $desc_val;?>">
             </div>
 
             <div class="form-group">
@@ -110,8 +110,7 @@
                 <input required type="text" placeholder="Ex: categoria1 categoria2"class="form-control" id="stimuli_category" name="stimuli_category" value="<?php echo $cat_val;?>">
             </div>
 
-            <div class="input-estimulos">
-            
+            <div class="input-estimulos">            
                 <div class="form-group">
                     <label class="label-cadastro" for="stimuli_type">Tipo de estímulo:</label>
                     <select onchange="modal_changeType()"class="form-control" id="stimuli_type" name="stimuli_type">
@@ -133,7 +132,6 @@
                         </span>
                     </div>
                 </div>
-
             </div><!--input estimulos-->
 
             <div class="input-group mb-3 selecionar-arquivo">
@@ -146,18 +144,15 @@
                 <input id="inp_fileName" type="text" readonly class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
 
                 <button class="btn btn-outline-secondary" disabled type="button" id="recordButton" onclick="recordAudio()"><i class="fas fa-microphone"></i></button>
-            </div><!--selecionar arquivo--> 
+            </div><!--selecionar arquivo-->
 
-            <div class="container" id="preview">
-                Selecione um arquivo.
-            </div>
+            <div class="container" id="preview"></div>
 
             <div class="container-botao">
                 <button type="button" class="btn btn-primary btn-lg btn-block botao_cadastrar" onclick="modal_addImage(event)">
                     <p>Cadastrar<?php //echo $lang['stimuli_next']; ?></p>
                 </button>
-            </div>
-             
+            </div>             
         </form>
     </div>
 
