@@ -208,7 +208,7 @@
                     <span class="badge badge-secondary"><?php echo $fetch['description']; ?></span>
 
                     <div class="categorias-estimulo"><!--categorias-->
-                        <?php if ($fetch['owner_id'] != 'pub') { ?><!--tag publico-->
+                        <?php if ($fetch['owner_id'] == 'pub') { ?><!--tag publico-->
                             <p class="card-text badge badge-secondary">Público</p>
                         <?php } ?>
 
