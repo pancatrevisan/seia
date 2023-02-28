@@ -1,0 +1,45 @@
+A atividade dos sete erros vai ser parecida com alguma já criada. Dá para inserir duas imagens e permitir ao criador da atividade 
+marcar algumas partes nas quais existam erros... 
+
+
+Primieiro passo: Criar a classe em activity/instructions/SevenErrors.js
+
+Esta classe extende de instruction. 
+
+        constructor(data = { 'type': 'SevenErrors', 'position': -1, 'editable': true, 'next': -1 }, activity) {
+        super(data,activity);
+    }
+
+O próximo passo é pensar nos atributos que teremos no jogo. Duas imagens, uma a normal, outra com erros; os 
+    marcadores de erros; um tempo para a atividade finalizar; 
+
+Nós podemos adicionar atributos através do atributo "editableAttributes". Adicionando objetos do tipo "AttributeDescriptor"
+    informamos quais tipos de atributos teremos e eles serão exibidos na tela de edição para o usuário.
+
+A linha abaixo insere um atributo que é uma imagem, com nome "original_image", não aceita mais de um valor, descrição para o usuário e 'swap' que vai trocar o valor - poderia ser "add/remove" que seria uma lista de atributos, ou seja, ia criar um array de imagens selecionadas. 
+
+this.editableAttributes.push(
+            new AttributeDescriptor("original_image", ['image'], false, "<i class='fas fa-star'></i>Imagem Modelo", 'swap')
+        );
+
+
+O próximo, é igual ao anterior, mas representa a imagem com os erros: 
+this.editableAttributes.push(
+            new AttributeDescriptor("original_image", ['image'], false, "<i class='fas fa-star'></i>Imagem Modelo", 'swap'),
+         -->   new AttributeDescriptor("error_image", ['image'], false, "<i class='fas fa-star'></i>Imagem com Diferenças", 'swap')
+        );
+
+
+Por fim, um atributo que permite ao usuário informar quantos segundos a atividade irá ser apresentada até termiar automaticamente:
+
+new AttributeDescriptor("showTime",['integer'],false,"<img src='/SEIA/media/icones/tempo_branco.svg'>Tempo de exibição",'swap')
+
+SevenErrors_1.js
+------------
+
+Para podermos testar o código, é necessário implementar alguns outros métodos: 
+resize, terminate, exportXML, pause, update, render, renderPreview, pointerUp, pointerDown, editPointerDown, editPointerMove, editPointerDrag. Todas foram copiadas de Prompt e algumas "limpas", sem código. 
+
+O código 'SevenErrors_2.js' aponta o que foi feito. 
+
+Lembre-se, criamos a configuração de um timer e a seleção de duas imagens. 
