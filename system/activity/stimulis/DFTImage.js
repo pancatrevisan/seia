@@ -39,7 +39,7 @@ class DFTImage{
         var link = document.createElement('link');
         link.setAttribute('rel', 'stylesheet');
         link.setAttribute('type', 'text/css');
-        link.setAttribute('href', 'href="https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+        //link.setAttribute('href', 'href="https://fonts.googleapis.com/css2?family=Righteous&display=swap');
         document.head.appendChild(link);
         
         var img = document.getElementById(this.id);
