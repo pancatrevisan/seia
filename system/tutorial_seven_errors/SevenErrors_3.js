@@ -6,53 +6,15 @@ class SevenErrors  extends Instruction {
         this.editableAttributes.push(
             new AttributeDescriptor("original_image", ['image'], false, "<i class='fas fa-star'></i>Imagem Modelo", 'swap'),
             new AttributeDescriptor("error_image", ['image'], false, "<i class='fas fa-star'></i>Imagem com Diferenças", 'swap'),
-            new AttributeDescriptor("showTime",['integer'],false,"<img src='/SEIA/media/icones/tempo_branco.svg'>Tempo de exibição",'swap'),
-            new AttributeDescriptor("errors",['error'],true,"<img src='/SEIA/media/icones/add_conteiner.svg'>Adicionar Erro",'add/remove',null,null,null,'errors')
+            new AttributeDescriptor("showTime",['integer'],false,"<img src='/SEIA/media/icones/tempo_branco.svg'>Tempo de exibição",'swap')
         );
         
 
         'showTime' in data? this.showTime = data['showTime']*1000: this.showTime = -1;
         this.timer = 0;
 
-        this.errors = [];
-        this.idCounter = 0;
     }
-    
-    removeStimuli(stimuli){
-        console.log(this.errors);
-        console.log("remove");
-        console.log(stimuli);
-
-        if (stimuli.startsWith("ERROR_")){
-            for(i= 0; i < this.stimulis.length; i++){
-                if(this.errors[i].localID==stimuli ){
-                    var s = this.errors[i];
-                    this.errors.splice(i,1);
-                    delete this.errors[stimuli];
-                    console.log(this.errors);
-                    return s;
-                }
-            }
-            return; 
-        }
-        var i;
-        for(i= 0; i < this.stimulis.length; i++){
-            if(this.stimulis[i].localID==stimuli ){
-                var s = this.stimulis[i];
-                this.stimulis.splice(i,1);
-                delete this.idStimulis[stimuli];
-                return s;
-            }
-        }
-        
-    }
-
-    addError(){
-        this.idCounter ++;
-        var id = this.idCounter; //o id é local à atividade; pode ter um contador, etc. 
-        this.errors.push(new ErrorStimulus("ERROR_"+id, this.activity, this, [50,50]));
-        
-    }
+ 
     
 
     resize(scale){
@@ -100,7 +62,7 @@ class SevenErrors  extends Instruction {
     startRunning(){
         
         super.startRunning();
-        
+        console.log("start running");
         
     }
     pause(){
@@ -114,7 +76,7 @@ class SevenErrors  extends Instruction {
         if(this.timer >= this.showTime){
             this.terminate();
         }
-        
+        console.log("Timer: " + this.timer + " Total Time: " + this.showTime);
         return;
     }
 
@@ -124,22 +86,12 @@ class SevenErrors  extends Instruction {
         for(i = 0; i < this.stimulis.length; i++){
             this.stimulis[i].render(ctx, scale);
         }
-
-        for(i = 0; i < this.errors.length; i++){
-            this.errors[i].render(ctx,scale);
-        }
     }
     
     
     renderPreview(ctx, scale=1){
         //o preview é usado na edição, caso seja necessário desenhar de maneira diferente...
-        for(i = 0; i < this.stimulis.length; i++){
-            this.stimulis[i].render(ctx, scale);
-        }
-
-        for(var i = 0; i < this.errors.length; i++){
-            this.errors[i].renderPreview(ctx,scale);
-        }
+        this.render(ctx, scale);
     }
     
     pointerUp(evt){
@@ -150,37 +102,7 @@ class SevenErrors  extends Instruction {
     }
     editPointerDown(evt){
         //na edição, ao clicar...
-        this.imageBeingEdited = null;
-        this.clickEditImage();   
-        if (this.imageBeingEdited != null)
-        return;
-        var i;
-        
-        
-        for (i = this.errors.length-1; i>=0; i=i-1){
-            var image = this.errors[i].renderImage;
-            if(image!=null){
-                image.canDrag = false; 
-                image.beingEdited = false;
-                
-            }
-        }
-        for (i = this.errors.length-1; i>=0; i=i-1){
-            var image = this.errors[i].renderImage;
-            if(image!=null){
-                
-                image.editPointerDown();
-                if(image.wasPointed()){
-                    this.imageBeingEdited = image;
-                    if(!image.hasButtonClick){
-                        image.canDrag = true; 
-                    }
-                    image.beingEdited = true;
-                    return;
-                }
-            }
-        }
-       
+        this.clickEditImage();       
     }
     
     editPointerMove(evt){

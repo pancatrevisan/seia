@@ -17,6 +17,7 @@
 <script type="text/javascript" src="<?php echo BASE_URL; ?>/activity/stimulis/TextInputStimulus.js"></script>
 <script type="text/javascript" src="<?php echo BASE_URL; ?>/activity/stimulis/YoutubeVideo.js"></script>
 <script type="text/javascript" src="<?php echo BASE_URL; ?>/activity/stimulis/CamCaptureStimulus.js"></script>
+<script type="text/javascript" src="<?php echo BASE_URL; ?>/activity/stimulis/ErrorStimulus.js"></script>
 <script type="text/javascript" src="<?php echo BASE_URL; ?>/activity/Activity.js"></script>
 <script type="text/javascript" src="<?php echo BASE_URL; ?>/activity/Instruction.js"></script>
 
@@ -776,7 +777,14 @@
                 ///Cria um seletor para cor
                 editColor(instruction, attr_descriptor);
                 return;
-            } else { //search in database or locally.
+            }else if (attr_desc.attributeTypes.length == 1 && attr_desc.attributeTypes[0] == 'error') {
+                ///Cria um seletor para cor
+                //editColor(instruction, attr_descriptor);
+                //alert("Editar um erro :)");
+                instruction.addError();
+                return;
+            }
+            else { //search in database or locally.
                 //if user can add text
                 editStimuli(instruction, attr_descriptor);
                 return;
@@ -1520,6 +1528,7 @@
         } else if (stimulus.type == "video") {
             content = document.getElementById('videoPropsTemplate').cloneNode(true);
         } else if (stimulus.type == 'image') {
+
             if (stimulus.dragAndAssociate == true) {
                 var container = createSelectStimuliContainer('image', stimulus.instruction, null, false, false);
                 showModal("Selecione o conteiner correto para o estimulo", container, null, false);
