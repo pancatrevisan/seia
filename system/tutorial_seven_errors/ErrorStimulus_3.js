@@ -6,13 +6,9 @@ class ErrorStimulus extends Stimulus{
         var size = [64,64];
         this.renderImage = new DFTImage('_textFrame',size ,position,instruction,this, false);  
         this.renderImage.beingEdited = true;
-        
-        //o jogador encontrou? 
-        this.found = false;
+              
     }
-    setFound(){
-        this.found = true;
-    }
+
     getRect(){
         return [this.renderImage.position[0], this.renderImage.position[1], 
             this.renderImage.size[0], this.renderImage.size[1]];
@@ -38,12 +34,8 @@ class ErrorStimulus extends Stimulus{
         return [text_xml,txtData];
     }
     render(ctx, scale=1){
-        if(this.activity.editing)//se está no modo edição desenha uma borda..
-            this.renderImage.borderColor = "#adb7ca";
-        else if (this.found){
-            this.renderImage.borderColor = "#00FF00";//um verde
-        }
-        this.renderImage.render(ctx, scale);
+        if(this.activity.editing)
+        this.renderImage.borderColor = "#adb7ca";
     }
     
     renderPreview(ctx, scale){

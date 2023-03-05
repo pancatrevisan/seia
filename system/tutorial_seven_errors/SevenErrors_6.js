@@ -23,8 +23,12 @@ class SevenErrors  extends Instruction {
                 console.log(sq);
                 this.addError(sq);
             }
+            
+
         }
-        console.log(this.errors);   
+
+        console.log(this.errors);
+        
     }
     
     removeStimuli(stimuli){
@@ -72,9 +76,6 @@ class SevenErrors  extends Instruction {
     resize(scale){
         //Chamada para redimensionar a atividade em uma tela diferente.
         //Aqui não precisa fazer algo especial.
-        for(var i = 0; i < this.errors.length; i++){
-            this.errors[i].resize(scale);
-        }
    }
 
    terminate(){
@@ -168,17 +169,6 @@ class SevenErrors  extends Instruction {
     
     pointerUp(evt){
         //ao soltar o mouse ou touch. Evento chamado, aqui trata. 
-        // durante o jogo, verifica se o erro foi clicado...
-        for (var i = this.errors.length-1; i>=0; i=i-1){
-            
-            //verifica se foi clicado com este método (verifica se o click foi dentro da imagem)
-            if(this.errors[i].wasPointed()){
-                //se sim, marca como encontrado. 
-                this.errors[i].setFound();
-            }
-                
-            
-        }
     }
     pointerDown(evt){
         //ao pressionar o mouse ou touch. Evento chamado, aqui trata. 

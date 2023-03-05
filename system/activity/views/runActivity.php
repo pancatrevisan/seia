@@ -69,6 +69,7 @@ $sel_lang = 'ptb';
     <script type="text/javascript" src="<?php echo BASE_URL; ?>/activity/stimulis/YoutubeVideo.js"></script> 
     <script type="text/javascript" src="<?php echo BASE_URL; ?>/activity/stimulis/CamCaptureStimulus.js"></script>
     <script type="text/javascript" src="<?php echo BASE_URL; ?>/activity/stimulis/DrawStimulus.js"></script>
+    <script type="text/javascript" src="<?php echo BASE_URL; ?>/activity/stimulis/ErrorStimulus.js"></script>
     <script type="text/javascript" src="<?php echo BASE_URL; ?>/activity/Activity.js"></script>
     <script type="text/javascript" src="<?php echo BASE_URL; ?>/activity/Instruction.js"></script>
 

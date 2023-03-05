@@ -10,21 +10,12 @@ class SevenErrors  extends Instruction {
             new AttributeDescriptor("errors",['error'],true,"<img src='/SEIA/media/icones/add_conteiner.svg'>Adicionar Erro",'add/remove',null,null,null,'errors')
         );
         
-        this.errors = [];
-        this.idCounter = 0;
+
         'showTime' in data? this.showTime = data['showTime']*1000: this.showTime = -1;
         this.timer = 0;
-        
-        if ('errors' in data){//carregar os erros salvos no XML. 
-            var sq_arr = JSON.parse(data['errors']); // converte a string para array. 
-            console.log(sq_arr);
-            for(var i =0; i < sq_arr.length; i++){
-                var sq = sq_arr[i];
-                console.log(sq);
-                this.addError(sq);
-            }
-        }
-        console.log(this.errors);   
+
+        this.errors = [];
+        this.idCounter = 0;
     }
     
     removeStimuli(stimuli){
@@ -56,25 +47,17 @@ class SevenErrors  extends Instruction {
         
     }
 
-    addError(sq = null){
+    addError(){
         this.idCounter ++;
         var id = this.idCounter; //o id é local à atividade; pode ter um contador, etc. 
-        if(sq!=null){
-            var error = new ErrorStimulus("ERROR_"+id, this.activity, this, [50,50]);
-            error.setRect(sq);
-            this.errors.push(error);
-            return; 
-        }
-        this.errors.push(new ErrorStimulus("ERROR_"+id, this.activity, this, [50,50])); 
+        this.errors.push(new ErrorStimulus("ERROR_"+id, this.activity, this, [50,50]));
+        
     }
     
 
     resize(scale){
         //Chamada para redimensionar a atividade em uma tela diferente.
         //Aqui não precisa fazer algo especial.
-        for(var i = 0; i < this.errors.length; i++){
-            this.errors[i].resize(scale);
-        }
    }
 
    terminate(){
@@ -107,7 +90,7 @@ class SevenErrors  extends Instruction {
         exp['data']['showTime'] = this.showTime;//tempo de exibição.
         exp['data']['original_image'] = this.original_image; //qual a id (do banco) da imagem
         exp['data']['error_image'] = this.error_image;
-
+        
         var json_arr = [];
         for(var i = 0; i < this.errors.length; i++){
             var e = this.errors[i].getRect();
@@ -168,17 +151,6 @@ class SevenErrors  extends Instruction {
     
     pointerUp(evt){
         //ao soltar o mouse ou touch. Evento chamado, aqui trata. 
-        // durante o jogo, verifica se o erro foi clicado...
-        for (var i = this.errors.length-1; i>=0; i=i-1){
-            
-            //verifica se foi clicado com este método (verifica se o click foi dentro da imagem)
-            if(this.errors[i].wasPointed()){
-                //se sim, marca como encontrado. 
-                this.errors[i].setFound();
-            }
-                
-            
-        }
     }
     pointerDown(evt){
         //ao pressionar o mouse ou touch. Evento chamado, aqui trata. 
