@@ -359,6 +359,7 @@ INSERT INTO `activity` (`id`, `owner_id`, `name`, `antecedent`, `behavior`, `con
 ('pubInserirTexto', 'pub', 'Inserir Texto', 'SÃƒÂ£o apresentados estÃƒÂ­mulos diferentes (imagens, textos ou ÃƒÂ¡udios)', 'O estudante escreve algo sobre os estÃƒÂ­mulos', 'Configurada no programa de ensino', 'Template', 1, 0, 0, ''),
 ('pubJogodeCorridaEmoes', 'pub', 'Jogo de Corrida - EmoÃƒÂ§ÃƒÂµes', '', '', '', 'corrida, game, template', 1, 0, 0, 'NOT_RATED'),
 ('pubMatchingtoSample', 'pub', 'Matching to Sample', 'Ãƒâ€° apresentado um estÃƒÂ­mulo modelo (imagem, texto ou ÃƒÂ¡udio) e estÃƒÂ­mulos de comparaÃƒÂ§ÃƒÂ£o (imagem, texto)', 'O estudante deve selecionar o estÃƒÂ­mulo de comparaÃƒÂ§ÃƒÂ£o esperado', 'Configurada no programa de ensino', 'MTS, template', 1, 0, 0, ''),
+('pubSeteErros', 'pub', 'Sete Erros', '', '', '', 'template', 1, 0, 0, 'NOT_RATED'),
 ('pubSelecionarPreferencias', 'pub', 'Selecionar Preferencias', '', '', '', 'template, preferencia', 1, 0, 0, 'NOT_RATED');
 
 
