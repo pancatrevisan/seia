@@ -78,22 +78,12 @@ class SevenErrors  extends Instruction {
 
    terminate(){
         
-        super.terminate();
-
-        this.done = true;
+        //essas flags marcam o resultado da atividade, se o aluno acertou, errou ou outro dado. Depois vai mudar
+        //por enquanto fica assim.
+        this.activity.result=this.activity.RESULT_NEUTRAL;
+        this.activity.resultData = "ONLY_SHOW"; 
         
-        //aqui vai ser simples/ acertou tudo, marca como correto/ 
-        //acertou nenhum, marca como errado/ 
-        //se acertou pelo mmenos um, marca como meio acerto (tip)
-        if(this.foundErrorsCount == this.errors.length){
-            this.activity.result = this.activity.RESULT_CORRECT;
-        }
-        else if(this.numCorrect == 0){
-            this.activity.result = this.activity.RESULT_WRONG;
-        }
-        else{
-            this.activity.result = this.activity.RESULT_CORRECT_TIP;
-        }
+        this.done = true;
     }
 
     exportXML(){
